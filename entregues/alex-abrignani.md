@@ -1,5 +1,5 @@
 # hola
-Aquesta funcio retorna TRUE si la puntuacio de la tirada és més gran que 3, i sino retorna FALSE.
+Aquesta funció retorna TRUE si la puntuació de la tirada és més gran que 3 o si el rival te més punts, i sinó retorna FALSE.
 
 ```
 create function dbo.mElsQuedo(@numeroJugador int,@puntuacioTirada int)
