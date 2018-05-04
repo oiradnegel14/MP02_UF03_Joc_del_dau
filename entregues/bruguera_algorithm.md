@@ -24,12 +24,10 @@ AS BEGIN
 			IF (@resultatrival-2>@resultat)
 				BEGIN
 					SET @quedo =1
-          PRINT('El jugador ' + @jugador + ' es queda els ' + @punts + ' punts')
 				END
 			ELSE
 				BEGIN
 					SET @quedo =0
-          PRINT('El jugador ' + @jugador + ' dona els ' + @punts + ' punts')
 				END
 		END
 	RETURN @quedo
