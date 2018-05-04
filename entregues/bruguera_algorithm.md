@@ -1,8 +1,9 @@
-#Burnout
+# Burnout
 
 A partir del resultat del rival adopta una postura segons el resultat del rival sempre que els punts 
 siguin inferior a 3 sino se'ls atribueix a ell mateix
 
+```
 CREATE FUNCTION daus(@jugador as int, @punts as int)
 RETURNS bit
 AS BEGIN
@@ -33,3 +34,4 @@ AS BEGIN
 		END
 	RETURN @quedo
 END
+```
