@@ -8,8 +8,8 @@ create function melsquedo(@jugador as int, @punts as int)
 returns bit
 as begin
 	declare @quedat as bit, @marcador_meu as int, @marcador_altre as int;
-	set @marcador_meu=(select sum(punts_anotats) from marcador where nJugadorAnota=@jugador)
-	set @marcador_altre=(select sum(punts_anotats) from marcador where nJugadorAnota!=@jugador)
+	set @marcador_meu=(select sum(puntsAnotats) from marcador where nJugadorAnota=@jugador)
+	set @marcador_altre=(select sum(puntsAnotats) from marcador where nJugadorAnota!=@jugador)
 	if @punts>=4 begin
 		set @quedat=1;
 	end
