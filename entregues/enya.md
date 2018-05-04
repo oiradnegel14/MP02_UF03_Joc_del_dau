@@ -20,7 +20,7 @@ create function dbo.mElsQuedo(@nJugador int, @punts int)
 						where @nJugador != nJugadorAnota)
 	declare @puntosconsuma int
 	set @puntosconsuma = @mispuntos + @punts
-	if(@puntosconsuma >= @puntoscontrario)
+	if(@puntosconsuma <= @puntoscontrario)
 	begin
 		set @peraqui = 1;
 	end
