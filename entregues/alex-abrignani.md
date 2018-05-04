@@ -7,9 +7,9 @@ returns bit
 as begin
 	declare @bit as bit
 	declare @puntsRival as int
-		set @puntsRival = (select puntsAnotats from marcador where nJugadorAnota!=@numeroJugador)
+	set @puntsRival = (select puntsAnotats from marcador where nJugadorAnota!=@numeroJugador)
 	declare @puntsMeus as int 
-		set @puntsMeus = (select puntsAnotats from marcador where nJugadorAnota=@numeroJugador)
+	set @puntsMeus = (select puntsAnotats from marcador where nJugadorAnota=@numeroJugador)
 
 	if @puntsRival>@puntsMeus or @puntuacioTirada>3
 		begin
