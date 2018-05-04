@@ -1,0 +1,19 @@
+# version absoluta luisz
+
+go
+create function dbo.mElsQuedo(@njugador int , @punts int )
+returns bit
+as begin
+declare  @si bit ;
+
+set @si =  1
+
+begin 
+	if @punts <3  return @si 	 	
+	else set @si = 0
+	end
+return @si 
+end
+
+
+
