@@ -1,5 +1,5 @@
 # Quedarse la tirada de dado
-Mi funcion hace que si la diferencia de puntos en una tirada es mas grande o igual que 2 se lo quede
+Mi función hace que si la diferencia de puntos en una tirada es más grande o igual que 2 se lo quede
 ```
 create function dbo.mElsQuedo(
   @nJugador as int,
