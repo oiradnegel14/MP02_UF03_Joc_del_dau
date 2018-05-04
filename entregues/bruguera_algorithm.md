@@ -17,7 +17,6 @@ AS BEGIN
 	IF (@punts>3)
 		BEGIN
 			SET @quedo =1
-      PRINT('El jugador ' + @jugador + ' es queda els ' + @punts + ' punts')
 		END
 	ELSE
 		BEGIN
