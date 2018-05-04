@@ -8,15 +8,15 @@
 
 ```
 create function mElsQuedo (
-@n_jugador_anota int,
-@puntsanotats int) returns bit
+@nJugador int,
+@punts int) returns bit
 as begin
 	declare @bit bit, @punts_altre_jugador int, @punts_jugador int;
 	set @punts_jugador = 
-		(select sum(puntsanotats) from marcador where n_jugador_anota = @n_jugador_anota )+@puntsanotats;
+		(select sum(puntsanotats) from Marcador where nJugadorAnota = @nJugador )+@punts;
 	set @punts_altre_jugador = 
-		(select sum(puntsanotats) from marcador where n_jugador_anota != @n_jugador_anota );
-	if(@punts_altre_jugador > @punts_jugador and @puntsanotats >= 4)
+		(select sum(puntsanotats) from Marcador where nJugadorAnota != @nJugador );
+	if(@punts_altre_jugador > @punts_jugador and @punts >= 4)
 		begin
 			set @bit = 1;
 		end
